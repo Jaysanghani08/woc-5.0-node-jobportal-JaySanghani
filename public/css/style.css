@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+:root {
+  --blue: #027bfb;
+  --white: #ffffff;
+  --gray : #4c5753;
+}
+
+body{
+  font-size: 110%;
+}
+
+*{
+  margin: 0;
+  padding : 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+  height : 120px;
+  /* align-items: center; */
+  /* padding : auto 50px; */
+  
+}
+
+.logo-trans{
+  font-size: 40px;
+  transition: all 0.3s;
+}
+
+.logo-trans:hover{
+  transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* inquiry */
+.wpsubinq{
+  margin-left : 5%;
+  width : 90%;
+  background : var(--blue);
+  margin-top : 50px;
+  margin-bottom : 20px;
+  height: 150px;
+  display: flex;
+  align-items : center;
+  box-shadow: 0 40px 38px rgba(11, 69, 117, 0.30), 0 15px 31px rgba(11, 69, 117, 0.22);
+  border-radius : 10px;
+}
+
+.wpsubinq .left{
+  color  : white;
+  width : 50%;
+  margin-left : 10%;
+  font-size : 30px;
+}
+
+.wpsubinq .left span i{
+  margin-right : 20px;
+}
+
+.wpsubinq .right {
+  padding-left : 15%;
+  width : 50%; 
+
+}
+.wpsubinq .right button{
+  margin-right:  5%;
+  width : 170px; 
+}
+
+@media (max-width: 800px) {
+
+  .wpsubinq .left{
+    font-size:  30px;
+  }
+  
+  .wpsubinq .right {
+  padding-left : 1%;
+  width : 50%; 
+
+  }
+
+  .letussmeet{
+      margin-left : -19px;
+  }
+
+  .wpsubinq .right .b1{
+    margin-bottom : 9px;
+
+  }
+
+  .wpsubinq .right .b2{
+    margin-top : 9px;
+
+  }
+
+  .wpsubinq .right button{
+    margin-right : 10px;
+  }
+
+}
+
+
+/* footer */
+.text-gray{
+  color:  var(--gray);
+  text-decoration: none;
+}
+	
+
