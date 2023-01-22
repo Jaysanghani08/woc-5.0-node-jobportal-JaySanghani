@@ -3,36 +3,36 @@ const Schema = mongoose.Schema;
 
 const studentSchema = new Schema({
   email: {
-      type: String,
-      required: true
+    type: String,
+    required: true
   },
   password: {
-      type: String,
-      required: true
+    type: String,
+    required: true
   },
   fname: {
-      type: String,
-      required: true
+    type: String,
+    required: true
   },
   lname: {
-      type: String,
-      required: true
+    type: String,
+    required: true
   },
   // location: {
   //     type: String,
   //     required: true
   // },
   phone: {
-      type: String,
-      required: true
+    type: String,
+    required: true
   },
-  age:{
+  age: {
     type: Number,
     required: true
   },
   education: {
-      type: Number,
-      required: true
+    type: Number,
+    required: true
   },
   // institution: {
   //     type: String,
@@ -43,14 +43,18 @@ const studentSchema = new Schema({
     required: true
   },
   github: {
-      type: String,
-      required: true
+    type: String,
+    required: true
+  },
+  profileImg: {
+    data: Buffer,
+    contentType: String
   },
   // resume: {
   //     type: String,
   //     required: true
   // },
-  token: String
+  // token: String
 });
 
 module.exports = mongoose.model('Student', studentSchema);

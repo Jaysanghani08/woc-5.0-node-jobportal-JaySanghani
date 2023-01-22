@@ -20,6 +20,10 @@
     "express-routes": "^1.0.1",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.8.3",
+    "multer": "^1.4.5-lts.1",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

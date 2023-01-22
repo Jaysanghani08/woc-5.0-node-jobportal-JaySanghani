@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 const Student = require("../model/Student");
+const studentImage = require("../model/studentImage");
 const jwt = require('jsonwebtoken');
 
 const handleNewStudent = async function (req, res) {
@@ -115,7 +116,7 @@ const authVerify = async function (req, res, next) {
     if (!foundStudent) return res.status(401).json("Email not found. Register yourself first.");
     // console.log(foundStudent);
     foundStudent.password = "";
-    foundStudent.id = "";
+    // foundStudent.id = "";
     req.user = foundStudent;
     next();
   } catch (err) {
@@ -124,12 +125,13 @@ const authVerify = async function (req, res, next) {
 }
 
 const updateStudent = async function (req, res) {
-  if (!req?.body?.email) {
+  // console.log(req.user)
+  if (!req?.user?._id) {
     return res.status(400).json({ 'message': 'Try Again' });
   }
 
-  const student = await Student.findOne({ email: req.body.email }).exec();
-  console.log(req.body);
+  const student = await Student.findOne({ id: req.body._id }).exec();
+  
   if (!student) {
     return res.status(204).json({ "message": `No student matches ID ${req.body.email}.` });
   }
@@ -138,13 +140,14 @@ const updateStudent = async function (req, res) {
   // if (req.body?.location) student.location = req.body.location;
   if (req.body?.phone) student.phone = req.body.phone;
   if (req.body?.age) student.age = req.body.age;
-  if (req.body?.education) student.education = req.body.education;
+  if (req.body?.education && req.body.education != '0') student.education = req.body.education;
   // if (req.body?.institution) student.institution = req.body.institution;
   if (req.body?.cpi) student.cpi = req.body.cpi;
   if (req.body?.github) student.github = req.body.github;
   // if (req.body?.resume) student.resume = req.body.resume;
+  // console.log(student);
   const result = await student.save();
-  res.redirect('/student/profile');
+  res.redirect('/student/studentProfile');
 }
 
 const logoutStudent = async function (req, res) {

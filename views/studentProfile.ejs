@@ -7,9 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Update Profile</title>
 </head>
@@ -29,23 +33,29 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto px-3">
           <li class="nav-item">
-            <a class="nav-link active px-3" aria-current="page" href="#">Home</a>
+            <a class="nav-link px-3" aria-current="page" href="./findCompanies">Dashboard</a>
           </li>
           <li class="nav-item">
             <a class="nav-link px-3" href="./about.html">About Us</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Join Us
+            <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-circle-user"
+                style="scale: 2.3; margin-right: 10px; color : #027bfb"></i>
               <!-- Join     <img src="images/arrow.svg" alt="" height="25"></span> -->
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="./studentLogin.html">As a Student</a></li>
-              <li><a class="dropdown-item" href="./companyLogin.html">As an Employer</a></li>
+              <li><a class="dropdown-item py-2 active" href="./studentProfile">Your Profile</a></li>
+              <!-- <hr class="dropdown-divider"> -->
+              <li><a class="dropdown-item py-2 "  href="./editStudent">Edit Profile</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="./logOutStudent"><i class="fa-solid fa-power-off"
+                    style="color: #027bfb; margin-right: 13px; scale: 1.3;"></i>Logout</a></li>
+              <hr class="dropdown-divider">
+              <li><a class="dropdown-item" href="./deleteStudent"><i class="fa-solid fa-user-minus"
+                    style="color: #027bfb; margin-right: 13px; scale: 1.3;"></i>Delete Profile</a></li>
             </ul>
           </li>
         </ul>
@@ -53,214 +63,140 @@
     </div>
   </nav>
 
-  <!-- content : signup form -->
-  <div class="content">
-    <!-- {{!-- <h3>Hello {{studentName}}</h3>  -->
+  <div class="profilecontent my-4">
+    <div class="container bg-light d-flex justify-content-center align-items-center">
 
-    <table>
-      <tr>
-        <td>email : </td>
-        <td><%=email%></td>
-      </tr>
-      <tr>
-      <tr>
-        <td>name : </td>
-        <td><%=fname%> <%=lname%></td>
-      </tr>
-      <tr>
-        <td>phone no : : </td>
-        <td><%=phone%> </td>
-      </tr>
-      <tr>
-        <td>Age: </td>
-        <td><%=age%> </td>
-      </tr>
-      <tr>
-        <td>education : </td>
-        <td><%=education%> </td>
-      </tr>
-      <tr>
-        <td>CPI : </td>
-        <td><%=cpi%> </td>
-      </tr>
-      <tr>
-        <td>github link : </td>
-        <td><%=github%> </td>
-      </tr>
-    </table>
+      <form class="well form-horizontal "  id="contact_form">
+        <!-- <fieldset> -->
 
-    <a href="./findCompanies.html"> <button>Find Companies</button> </a>
-    <a href="./editStudent.html"> <button>Edit Profile</button> </a>
-    <a href="./logOutStudent"> <button>Logout Profile</button> </a>
-    <a href="./deleteStudent"> <button>Delete Profile</button> </a>
+        <!-- Form Name -->
+        <legend>
+          <center>
+            <h2 ><b>Your Profile</b></h2>
+          </center>
+        </legend><br>
 
+        <!-- Text input-->
+
+        <div class="form-group mt-4">
+          <!-- <label class="col-md-4 control-label">First Name</label>   -->
+          <div class=" inputGroupContainer">
+            <div class="input-group mb-3">
+              <span class="mx-3 my-auto">First name : </span>
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+              <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+              <input type="text" class="form-control" name="fname" id="fname" value="<%=fname%>" readonly >
+            </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+          <!-- <label class="col-md-4 control-label" >Last Name</label>  -->
+          <div class=" inputGroupContainer">
+            <div class="input-group mb-3">
+              <span class="mx-3 my-auto">Last name : </span>
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+              <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+              <input type="text" class="form-control" name="lname" id="lname" value="<%=lname%>" readonly>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <!-- <label class=" control-label">E-Mail</label>   -->
+          <div class=" inputGroupContainer">
+            <div class="input-group mb-3">
+              <span class="mx-3 my-auto">Email : </span>
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope mx-1"></i> </span>
+              <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+              <input type="email" class="form-control" name="email" id="email" value="<%=email%> " readonly>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Text input-->
+
+        <div class="form-group">
+          <!-- <label class=" control-label">Contact No.</label>   -->
+          <div class=" inputGroupContainer">
+            <div class="input-group mb-3">
+              <span class="mx-3 my-auto">Mobile No. : </span>
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-phone mx-1"></i> </span>
+              <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+              <input type="text" class="form-control" name="phone" id="phone" value="(+91)  <%=phone%>" readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <!-- <label class=" control-label">Contact No.</label>   -->
+          <div class=" inputGroupContainer">
+            <div class="input-group mb-3">
+              <span class="mx-3 my-auto">Age : </span>
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+              <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+              <input type="text" class="form-control" name="age" id="age" value="<%=age%> "  readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group md-4">
+          <!-- <label class=" control-label">Department / Office</label> -->
+          <div class=" selectContainer">
+            <div class="input-group">
+              <span class="mx-3 my-auto">Education : </span>
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-graduate mx-1 " style="font-size: 18px;"></i> </span>
+              <select name="education " class="form-select bg-light form-control selectpicker" disabled >
+                <option value="0">
+                  <%=education%>
+                </option>
+                <option value="1">High School Level</option>
+                <option value="2">Under Graduate</option>
+                <option value="3">Post Graduate</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <!-- <label class=" control-label">Contact No.</label>   -->
+          <div class=" col-mt-4 inputGroupContainer">
+            <div class="input-group mb-3">
+              <span class="mx-3 my-auto">CPI : </span>
+              <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+              <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+              <input type="text" class="form-control" name="cpi" id="cpi" value="<%=cpi%> " readonly>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <div class=" col-mt-4 inputGroupContainer">
+            <div class="input-group mb-3">
+              <span class="mx-3 my-auto">Github link : </span>
+              <a class="d-inline mx-3" href="<%=github%>" target="_blank">
+                <%=github%>
+              </a>
+            </div>
+
+          </div>
+        </div>
+<!-- 
+        <input class="  btn btn-primary " href="./editStudent.html" type="button" value="Edit Profile"> -->
+        <a class=" mt-4 btn btn-primary w-100" href="./editStudent.html" role="button">Edit Profile</a>
+
+
+      </form>
+    </div>
   </div>
 
-
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <hr>
-
-  <!--   contact - wp and submit inquiary -->
-  <section class="wpsubinq">
-    <div class="left">
-      <!--       icon -->
-      <span><i class="fa fa-home" aria-hidden="true"></i></span>
-      <!--       text -->
-      <span class="letussmeet">Let us meet</span>
-    </div>
-    <div class="right">
-      <!--       2buttons -->
-      <a href="https://api.whatsapp.com/send/?phone=%2B919924590036&text&type=phone_number&app_absent=0"
-        target="_blank">
-        <button style="background-color: dark;" type="button b1" class="btn btn-outline-dark btn-lg b1">Whatsapp
-          now</button></a>
-      <a href="#inqform">
-        <button style="background-color: dark;" type="button b2" class="btn btn-outline-dark btn-lg">Inquiry
-          now</button>
-      </a>
-    </div>
-  </section>
-  <br>
-  <br>
-  <hr>
-
-  <!--   footer -->
-
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-  <div class=" footer1">
-    <!-- Footer -->
-    <footer class="text-center text-lg-start">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: Links -->
-        <section class="">
-          <!--Grid row-->
-          <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h3 class="text-uppercase mb-4 font-weight-bold">
-                <span>
-                  <img src="images/logo.svg" alt="">
-                  Job Junction
-                </span>
-              </h3>
-              <p>
-                Vision Bio Products India Pvt. Ltd is a manufacturer, exporter and global supplier of processed and
-                frozen fruits and vegetables, spices, pulses, grains, nuts, flavours and oilseeds. We are a APEDA
-                Certified Export House driven by meticulous innovation and creativity that nurtures futuristic food
-                trends.
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-              <p>
-                <a class="text-gray" href="./product.html">Mango Pulp</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Guava Pulp</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Jaggery</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Pickle</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Tomato ketchup</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Cow's Ghee</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">
-                Useful links
-              </h6>
-              <p>
-                <a href="./index.html" class="text-gray">Home</a>
-              </p>
-              <p>
-                <a href="./about.html" class="text-gray">About Us</a>
-              </p>
-              <p>
-                <a href="./product.html" class="text-gray">Products</a>
-              </p>
-              <p>
-                <a href="./certificate.html" class="text-gray">Certificates</a>
-              </p>
-              <p>
-                <a href="./contact.html" class="text-gray">Contact Us</a>
-              </p>
-
-            </div>
-
-            <!-- Grid column -->
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <a href="https://maps.app.goo.gl/GMQzc1Vhc2vxBCpTA" target=_blank class="text-gray"
-                style="text-decoration: none;">
-                <p><i class="fas fa-home mr-3"></i> Una - Talala Road, Madhupur Jambur, Gujarat-362140, India </p>
-              </a>
-
-              <a href="mailto:visionmangopulpsales1@gmail.com" class="text-gray" style="text-decoration: none;">
-                <p><i class="fas fa-envelope mr-3"></i> visionmangopulpsales1@gmail.com</p>
-              </a>
-
-              <a href="tel:7862819337" class="text-gray" style=" text-decoration: none;">
-                <p><i class="fas fa-phone mr-3"></i> +91 7862819337</p>
-              </a>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!--Grid row-->
-        </section>
-        <!-- Section: Links -->
-
-        <hr class="my-3">
-
-        <!-- Section: Copyright -->
-        <section class="p-3 pt-0">
-          <div class="row d-flex align-items-center">
-            <!-- Grid column -->
-            <div class="col-md-7 col-lg-8 text-center text-md-end">
-              <!-- Copyright -->
-              <div class="p-3 flex" style="justify-content: center; font-size : 15px;">
-                <b>Designed & Managed By : Jay Sanghani & Shubham Patel</b>
-                <a href="https://jay-sanghani.github.io/jaynshubham/" target="_blank">
-                  <button type="button b2" class="btn btn-outline-light"
-                    style="margin-left : 20px; border-radius: 15px;">Contact us</button>
-                </a>
-              </div>
-              <!-- Copyright -->
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-
-        </section>
-        <!-- Section: Copyright -->
-      </div>
-      <!-- Grid container -->
-    </footer>
+  <!-- <a class="btn btn-primary" href="./findCompanies.html" role="button">Find Companies</a> -->
+  <!-- <a class="btn btn-primary" href="./logOutStudent"> Logout </a>
+  <a class="btn btn-primary" href="./deleteStudent"> Delete </a> -->
 
 </body>
 

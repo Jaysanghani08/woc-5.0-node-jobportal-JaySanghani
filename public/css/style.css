@@ -4,117 +4,177 @@
 :root {
   --blue: #027bfb;
   --white: #ffffff;
-  --gray : #4c5753;
+  --gray: #4c5753;
 }
 
-body{
-  font-size: 110%;
+body {
+  font-size: 107%;
 }
 
-*{
+.text-blue {
+  color: var(--blue)
+}
+
+.text-gray {
+  color: var(--gray);
+  text-decoration: none;
+}
+
+
+
+* {
   margin: 0;
-  padding : 0;
+  padding: 0;
   font-family: 'Poppins', sans-serif;
 }
 
-.navbar{
-  height : 120px;
+.navbar {
+  /* height : 120px; */
   /* align-items: center; */
   /* padding : auto 50px; */
-  
+
 }
 
-.logo-trans{
+.logo-trans {
   font-size: 40px;
   transition: all 0.3s;
 }
 
-.logo-trans:hover{
+.logo-trans:hover {
   transform: scale(1.05);
 }
 
 
+/* find comppanies page */
+.formf {
+  padding: auto 15px;
+  height: 90px;
+  width: 65vw;
+  border-radius: 20px;
+}
 
+.formf input {
+  margin: 20px 30px;
+}
 
+.formf button {
+  margin: 20px 20px;
+  width: 120px;
+}
 
+.card-container{
+  width: 65vw;
+}
 
+.jobcard{
+  transition: all 0.3s;
+}
+
+.jobcard:hover{
+  transform: scale(1.10);
+  box-shadow: 0 40px 38px rgba(11, 69, 117, 0.30), 0 15px 31px rgba(11, 69, 117, 0.22)
+}
+
+/* profile page */
+
+.profilecontent .container{
+  /* display: flex; */
+  transition: all 0.3s;
+  width: 100vw;
+}
+
+.profilecontent .container:hover{
+  transform: scale(1.02);
+}
+
+.profilecontent .container{
+  width: 50vw;
+  height: 83vh;
+}
+
+.input-group span:nth-child(1){
+  width: 130px;
+}
+
+.input-group input{
+  width:330px;
+}
+
+/* .input-group input{
+  
+} */
 
 
 
 
 
 /* inquiry */
-.wpsubinq{
-  margin-left : 5%;
-  width : 90%;
-  background : var(--blue);
-  margin-top : 50px;
-  margin-bottom : 20px;
+.wpsubinq {
+  margin-left: 5%;
+  width: 90%;
+  background: var(--blue);
+  margin-top: 50px;
+  margin-bottom: 20px;
   height: 150px;
   display: flex;
-  align-items : center;
-  box-shadow: 0 40px 38px rgba(11, 69, 117, 0.30), 0 15px 31px rgba(11, 69, 117, 0.22);
-  border-radius : 10px;
+  align-items: center;
+  box-shadow: 0 60px 38px rgba(11, 69, 117, 0.30), 0 15px 31px rgba(11, 69, 117, 0.22);
+  border-radius: 10px;
 }
 
-.wpsubinq .left{
-  color  : white;
-  width : 50%;
-  margin-left : 10%;
-  font-size : 30px;
+.wpsubinq .left {
+  color: white;
+  width: 50%;
+  margin-left: 10%;
+  font-size: 30px;
 }
 
-.wpsubinq .left span i{
-  margin-right : 20px;
+.wpsubinq .left span i {
+  margin-right: 20px;
 }
 
 .wpsubinq .right {
-  padding-left : 15%;
-  width : 50%; 
+  padding-left: 15%;
+  width: 50%;
 
 }
-.wpsubinq .right button{
-  margin-right:  5%;
-  width : 170px; 
+
+.wpsubinq .right button {
+  margin-right: 5%;
+  width: 170px;
 }
 
 @media (max-width: 800px) {
 
-  .wpsubinq .left{
-    font-size:  30px;
+  .wpsubinq .left {
+    font-size: 30px;
   }
-  
+
   .wpsubinq .right {
-  padding-left : 1%;
-  width : 50%; 
+    padding-left: 1%;
+    width: 50%;
 
   }
 
-  .letussmeet{
-      margin-left : -19px;
+  .letussmeet {
+    margin-left: -19px;
   }
 
-  .wpsubinq .right .b1{
-    margin-bottom : 9px;
-
-  }
-
-  .wpsubinq .right .b2{
-    margin-top : 9px;
+  .wpsubinq .right .b1 {
+    margin-bottom: 9px;
 
   }
 
-  .wpsubinq .right button{
-    margin-right : 10px;
+  .wpsubinq .right .b2 {
+    margin-top: 9px;
+
+  }
+
+  .wpsubinq .right button {
+    margin-right: 10px;
   }
 
 }
 
 
 /* footer */
-.text-gray{
-  color:  var(--gray);
-  text-decoration: none;
-}
-	
-

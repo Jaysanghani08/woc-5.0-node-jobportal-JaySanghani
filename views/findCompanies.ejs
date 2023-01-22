@@ -10,6 +10,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>Update Profile</title>
 </head>
@@ -29,23 +32,29 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto px-3">
           <li class="nav-item">
-            <a class="nav-link active px-3" aria-current="page" href="#">Home</a>
+            <a class="nav-link active px-3" aria-current="page" href="#">Dashboard</a>
           </li>
           <li class="nav-item">
             <a class="nav-link px-3" href="./about.html">About Us</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-              aria-expanded="false">Join Us
+            <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-circle-user"
+                style="scale: 2.3; margin-right: 10px; color : #027bfb"></i>
               <!-- Join     <img src="images/arrow.svg" alt="" height="25"></span> -->
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="./studentLogin.html">As a Student</a></li>
-              <li><a class="dropdown-item" href="./companyLogin.html">As an Employer</a></li>
+              <li><a class="dropdown-item py-2" href="./studentProfile">Your Profile</a></li>
+              <!-- <hr class="dropdown-divider"> -->
+              <li><a class="dropdown-item py-2" href="./editStudent">Edit Profile</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" href="./logOutStudent"><i class="fa-solid fa-power-off"
+                    style="color: #027bfb; margin-right: 13px; scale: 1.3;"></i>Logout</a></li>
+              <hr class="dropdown-divider">
+              <li><a class="dropdown-item" href="./deleteStudent"><i class="fa-solid fa-user-minus"
+                    style="color: #027bfb; margin-right: 13px; scale: 1.3;"></i>Delete Profile</a></li>
             </ul>
           </li>
         </ul>
@@ -53,36 +62,78 @@
     </div>
   </nav>
 
-  <!-- content : signup form -->
-  <div class="content p-5">
-    <h3>Hello <%= student %></h3>
+  <section>
+    <div class="d-inline-block d-flex align-items-center"
+      style="width: 100vw; background-color: rgba(200, 33, 66, 0.274); height: 250px; padding-left: 20%;">
+      <div class="">
+        <h2> Hello <span class="text-blue">
+            <%= student %>
+          </span>,</h2>
+        <h3> <br>Look what we found for you !
+        </h3>
+      </div>
+    </div>
+    <div class="text-center position-relative">
 
-    <div class="card-container container">
+      <div class="position-absolute top-50 start-50 translate-middle rounded"
+        style="background-color: #027bfb;">
+        <div class="input-group formf">
+          <i class="fa fa-edit top-100 text-white d-flex align-items-center justify-content-end mr-2"
+            style="width: 50px;"></i>
+          <input type="text" class="form-control" placeholder="Job title or Keyword"
+            style="border-radius: 15px;  margin-left: 5px; width: 130px;">
+          <i class="fa fa-location-dot top-100 text-white d-flex align-items-center mx-2"></i>
+          <input type="text" class="form-control" placeholder="Location" style="border-radius: 15px; width: 30px;">
+          <!-- <button class="btn btn-outline-secondary" type="button">Button</button> -->
+          <button class="btn btn-light" type="button" style="border-radius: 15px">Find job</button>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- content : signup form -->
+  <!-- <section class="job-container"> -->
+  <div class="content p-5 bg-light">
+
+    <div class="card-container container mt-5">
       <% foundCompanies.forEach((company)=> { %>
 
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">
-              <%=company.name %>
-            </h5>
-            <h6 class="card-subtitle mb-2 text-muted">
-              <%=company.package %> LPA
-            </h6>
-            <h6 class="card-subtitle mb-2 text-muted">
-              <%=company.position %>
-            </h6>
-            <p class="card-text">
-              <%=company.description %>
-            </p>
-            <a href=<%=company.website %> class="card-link" target=_blank><%=company.website %></a>
+        <div class="card my-4 jobcard">
+          <div class="card-body p-4">
+            <div class="d-flex">
+              <div class="col-2">
+                <img src="images/google.svg" alt="" height="80px">
+              </div>
+              <div class="col-10">
+                <div class="d-flex justify-content-between">
+                  <div class="col-9">
+                    <h5 class="card-title ">
+                      <%=company.name %>
+                    </h5>
+                  </div>
+                  <h6 class="card-subtitletext-muted ">
+                    <i class="fa fa-inr mx-1 text-blue"></i>
+                    <%=company.package %> LPA
+                  </h6>
+                </div>
+                <h6 class="card-subtitle mb-2 text-muted">
+                  <%=company.position %>
+                </h6>
+                <p class="card-text">
+                  <%=company.description %>
+                </p>
+                <a href=<%=company.website %> class="card-link" target=_blank><%=company.website %></a>
+              </div>
+            </div>
+
           </div>
         </div>
-        <hr />
+        <!-- <hr /> -->
         <% }); %>
     </div>
 
   </div>
-
+  <!-- </section> -->
 
 
   <br>
@@ -138,10 +189,7 @@
                 </span>
               </h3>
               <p>
-                Vision Bio Products India Pvt. Ltd is a manufacturer, exporter and global supplier of processed and
-                frozen fruits and vegetables, spices, pulses, grains, nuts, flavours and oilseeds. We are a APEDA
-                Certified Export House driven by meticulous innovation and creativity that nurtures futuristic food
-                trends.
+                We collect reviews from our users so you can get an honest opinion of what an experience with our website.
               </p>
             </div>
             <!-- Grid column -->
