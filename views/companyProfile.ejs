@@ -7,16 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Update Profile</title>
+  <title>Company Proile</title>
 </head>
 
 <body>
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+  <!-- <nav class="navbar navbar-expand-lg bg-body-tertiary ">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
         aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,8 +29,8 @@
       <a class="navbar-brand" href="#">
         <span>
           <img src="images/logo.svg" alt="">
-          <!-- </span>
-        <span class="brandName">  -->
+           </span>
+        <span class="brandName">  
           Job Junction
         </span>
       </a>
@@ -61,11 +65,54 @@
         </form>
       </div>
     </div>
+  </nav> -->
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light static-top">
+    <div class="container">
+      <a class="navbar-brand logo-trans" href="./index.html">
+        <img src="/images/logo.svg" alt="..." height="50">
+        <soan> Job Junction</soan>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto px-3">
+          <li class="nav-item">
+            <a class="nav-link px-3 active" aria-current="page" href="./profile">Company</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3 disabled" href="./about.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-circle-user"
+                style="scale: 2.3; margin-right: 10px; color : #027bfb"></i>
+              <!-- Join     <img src="images/arrow.svg" alt="" height="25"></span> -->
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item py-2 active" href="./profile">Company Profile</a></li>
+              <!-- <hr class="dropdown-divider"> -->
+              <li><a class="dropdown-item py-2 "  href="./editCompany">Edit Profile</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="./logOutCompany"><i class="fa-solid fa-power-off"
+                    style="color: #027bfb; margin-right: 13px; scale: 1.3;"></i>Logout</a></li>
+              <hr class="dropdown-divider">
+              <li><a class="dropdown-item" href="./deleteCompany"><i class="fa-solid fa-user-minus"
+                    style="color: #027bfb; margin-right: 13px; scale: 1.3;"></i>Delete Profile</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- content : signup form -->
-  <div class="content">
-    <!-- {{!-- <h3>Hello {{studentName}}</h3> --}} -->
+ <!--  <div class="content">
+
 
     <table>
       <tr>
@@ -105,177 +152,159 @@
 
     <a href="./editCompany.html"> <button>Edit Profile</button> </a>
     <a href="./logOutCompany"> <button>Logout Profile</button> </a>
-    <a href="./deleteCompany"> <button>Delete Profile</button> </a>
+    <a href="./deleteCompany"> <button>Delete Profile</button> </a> 
 
   </div>
+-->
 
+<div class="profilecontent my-4">
+  <div class="container bg-light d-flex justify-content-center align-items-center">
 
+    <form class="well form-horizontal "  id="contact_form">
+      <!-- <fieldset> -->
 
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+      <!-- Form Name -->
+      <legend>
+        <center>
+          <h2 ><b>Your Company Profile</b></h2>
+        </center>
+      </legend><br>
 
-  <hr>
+      <!-- Text input-->
 
-  <!--   contact - wp and submit inquiary -->
-  <section class="wpsubinq">
-    <div class="left">
-      <!--       icon -->
-      <span><i class="fa fa-home" aria-hidden="true"></i></span>
-      <!--       text -->
-      <span class="letussmeet">Let us meet</span>
-    </div>
-    <div class="right">
-      <!--       2buttons -->
-      <a href="https://api.whatsapp.com/send/?phone=%2B919924590036&text&type=phone_number&app_absent=0"
-        target="_blank">
-        <button style="background-color: dark;" type="button b1" class="btn btn-outline-dark btn-lg b1">Whatsapp
-          now</button></a>
-      <a href="#inqform">
-        <button style="background-color: dark;" type="button b2" class="btn btn-outline-dark btn-lg">Inquiry
-          now</button>
-      </a>
-    </div>
-  </section>
-  <br>
-  <br>
-  <hr>
-
-  <!--   footer -->
-
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-  <div class=" footer1">
-    <!-- Footer -->
-    <footer class="text-center text-lg-start">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: Links -->
-        <section class="">
-          <!--Grid row-->
-          <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h3 class="text-uppercase mb-4 font-weight-bold">
-                <span>
-                  <img src="images/logo.svg" alt="">
-                  Job Junction
-                </span>
-              </h3>
-              <p>
-                Vision Bio Products India Pvt. Ltd is a manufacturer, exporter and global supplier of processed and
-                frozen fruits and vegetables, spices, pulses, grains, nuts, flavours and oilseeds. We are a APEDA
-                Certified Export House driven by meticulous innovation and creativity that nurtures futuristic food
-                trends.
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-              <p>
-                <a class="text-gray" href="./product.html">Mango Pulp</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Guava Pulp</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Jaggery</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Pickle</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Tomato ketchup</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Cow's Ghee</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">
-                Useful links
-              </h6>
-              <p>
-                <a href="./index.html" class="text-gray">Home</a>
-              </p>
-              <p>
-                <a href="./about.html" class="text-gray">About Us</a>
-              </p>
-              <p>
-                <a href="./product.html" class="text-gray">Products</a>
-              </p>
-              <p>
-                <a href="./certificate.html" class="text-gray">Certificates</a>
-              </p>
-              <p>
-                <a href="./contact.html" class="text-gray">Contact Us</a>
-              </p>
-
-            </div>
-
-            <!-- Grid column -->
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <a href="https://maps.app.goo.gl/GMQzc1Vhc2vxBCpTA" target=_blank class="text-gray"
-                style="text-decoration: none;">
-                <p><i class="fas fa-home mr-3"></i> Una - Talala Road, Madhupur Jambur, Gujarat-362140, India </p>
-              </a>
-
-              <a href="mailto:visionmangopulpsales1@gmail.com" class="text-gray" style="text-decoration: none;">
-                <p><i class="fas fa-envelope mr-3"></i> visionmangopulpsales1@gmail.com</p>
-              </a>
-
-              <a href="tel:7862819337" class="text-gray" style=" text-decoration: none;">
-                <p><i class="fas fa-phone mr-3"></i> +91 7862819337</p>
-              </a>
-            </div>
-            <!-- Grid column -->
+      <div class="form-group mt-4">
+        <!-- <label class="col-md-4 control-label">First Name</label>   -->
+        <div class=" inputGroupContainer">
+          <div class="input-group mb-3">
+            <span class="mx-3 my-auto">Company name : </span>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+            <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+            <input type="text" class="form-control" name="name" id="name" value="<%=name%>" readonly >
           </div>
-          <!--Grid row-->
-        </section>
-        <!-- Section: Links -->
-
-        <hr class="my-3">
-
-        <!-- Section: Copyright -->
-        <section class="p-3 pt-0">
-          <div class="row d-flex align-items-center">
-            <!-- Grid column -->
-            <div class="col-md-7 col-lg-8 text-center text-md-end">
-              <!-- Copyright -->
-              <div class="p-3 flex" style="justify-content: center; font-size : 15px;">
-                <b>Designed & Managed By : Jay Sanghani & Shubham Patel</b>
-                <a href="https://jay-sanghani.github.io/jaynshubham/" target="_blank">
-                  <button type="button b2" class="btn btn-outline-light"
-                    style="margin-left : 20px; border-radius: 15px;">Contact us</button>
-                </a>
-              </div>
-              <!-- Copyright -->
-            </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-
-        </section>
-        <!-- Section: Copyright -->
+        </div>
       </div>
-      <!-- Grid container -->
-    </footer>
-  </div>
 
+      <!-- Text input-->
+
+      <!-- Text input-->
+      <div class="form-group">
+        <!-- <label class=" control-label">E-Mail</label>   -->
+        <div class=" inputGroupContainer">
+          <div class="input-group mb-3">
+            <span class="mx-3 my-auto">Email : </span>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-envelope mx-1"></i> </span>
+            <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+            <input type="email" class="form-control" name="email" id="email" value="<%=email%> " readonly>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <!-- <label class=" control-label">Contact No.</label>   -->
+        <div class=" inputGroupContainer">
+          <div class="input-group mb-3">
+            <span class="mx-3 my-auto">Age : </span>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+            <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+            <input type="text" class="form-control" name="age" id="age" value="<%=age%> "  readonly>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <!-- <label class=" control-label">Contact No.</label>   -->
+        <div class=" inputGroupContainer">
+          <div class="input-group mb-3">
+            <span class="mx-3 my-auto">Position : </span>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+            <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+            <input type="text" class="form-control" name="position" id="position" value="<%=position%> "  readonly>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <!-- <label class=" control-label">Contact No.</label>   -->
+        <div class=" inputGroupContainer">
+          <div class="input-group mb-3">
+            <span class="mx-3 my-auto">Package: </span>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+            <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+            <input type="text" class="form-control" name="package" id="package" value="<%=package%>"  readonly>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="form-group mt-3">
+        <!-- <label class=" control-label">Contact No.</label>   -->
+        <div class=" col-mt-4 inputGroupContainer">
+          <div class="input-group mb-3">
+            <span class="mx-3 my-auto">Min. CPI : </span>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+            <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+            <input type="text" class="form-control" name="cpi" id="cpi" value="<%=cpi%> " readonly>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-3">
+        <!-- <label class=" control-label">Contact No.</label>   -->
+        <div class=" col-mt-4 inputGroupContainer">
+          <div class="input-group mb-3">
+            <span class="mx-3 my-auto">Description : </span>
+            <span class="input-group-text" id="basic-addon1"><i class="fa fa-user-circle mx-1"></i> </span>
+            <!-- <span class="input-group-text" id="basic-addon1"> First name : </span> -->
+            <input type="text" class="form-control" name="description" id="description" value="<%=description%> " readonly>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group mt-3">
+        <div class=" col-mt-4 inputGroupContainer">
+          <div class="input-group mb-3">
+            <span class="mx-3 my-auto">Github link : </span>
+            <a class="d-inline mx-3" href="<%=website%>" target="_blank">
+              <%=website%>
+            </a>
+          </div>
+
+        </div>
+      </div>
+<!-- 
+      <input class="  btn btn-primary " href="./editStudent.html" type="button" value="Edit Profile"> -->
+      <a class=" mt-4 btn btn-primary w-100" href="./editCompany.html" role="button">Edit Profile</a>
+
+
+    </form>
+  </div>
+</div>
+
+
+  <hr class="my-3">
+  <section class="p-3 pt-0">
+    <div class="row d-flex align-items-center">
+      <!-- Grid column -->
+      <div class="col-md-7 col-lg-8 text-center text-md-end">
+        <!-- Copyright -->
+        <div class="p-3 flex" style="font-size : 15px;">
+          <b>Designed & Managed By : Jay Sanghani</b>
+          <a href="mailto:work.jay.sanghani@gmail.com" target="_blank">
+            <button type="button b2" class="btn btn-outline-primary"
+              style="margin-left : 20px; border-radius: 15px;">Contact me</button>
+          </a>
+        </div>
+        <!-- Copyright -->
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+
+  </section>
 </body>
 
 </html>

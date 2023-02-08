@@ -14,7 +14,8 @@
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Update Profile</title>
+  <!-- <link rel="icon" type="image/x-icon" href="/images/logo.svg"> -->
+  <title>Dashboard</title>
 </head>
 
 <body>
@@ -35,7 +36,7 @@
             <a class="nav-link active px-3" aria-current="page" href="#">Dashboard</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link px-3" href="./about.html">About Us</a>
+            <a class="nav-link px-3 disabled" href="./about.html">About Us</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" role="button"
@@ -62,14 +63,14 @@
     </div>
   </nav>
 
-  <section>
+  <section class="disabled">
     <div class="d-inline-block d-flex align-items-center"
       style="width: 100vw; background-color: rgba(200, 33, 66, 0.274); height: 250px; padding-left: 20%;">
       <div class="">
         <h2> Hello <span class="text-blue">
             <%= student %>
           </span>,</h2>
-        <h3> <br>Look what we found for you !
+        <h3> <br>Look what we've found for you !
         </h3>
       </div>
     </div>
@@ -91,8 +92,7 @@
     </div>
     </div>
   </section>
-  <!-- content : signup form -->
-  <!-- <section class="job-container"> -->
+
   <div class="content p-5 bg-light">
 
     <div class="card-container container mt-5">
@@ -128,174 +128,28 @@
 
           </div>
         </div>
-        <!-- <hr /> -->
         <% }); %>
     </div>
 
   </div>
-  <!-- </section> -->
-
-
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <hr>
-
-  <!--   contact - wp and submit inquiary -->
-  <section class="wpsubinq">
-    <div class="left">
-      <!--       icon -->
-      <span><i class="fa fa-home" aria-hidden="true"></i></span>
-      <!--       text -->
-      <span class="letussmeet">Let us meet</span>
-    </div>
-    <div class="right">
-      <!--       2buttons -->
-      <a href="https://api.whatsapp.com/send/?phone=%2B919924590036&text&type=phone_number&app_absent=0"
-        target="_blank">
-        <button style="background-color: dark;" type="button b1" class="btn btn-outline-dark btn-lg b1">Whatsapp
-          now</button></a>
-      <a href="#inqform">
-        <button style="background-color: dark;" type="button b2" class="btn btn-outline-dark btn-lg">Inquiry
-          now</button>
-      </a>
-    </div>
-  </section>
-  <br>
-  <br>
-  <hr>
-
-  <!--   footer -->
-
-  <!-- Remove the container if you want to extend the Footer to full width. -->
-  <div class=" footer1">
-    <!-- Footer -->
-    <footer class="text-center text-lg-start">
-      <!-- Grid container -->
-      <div class="container p-4 pb-0">
-        <!-- Section: Links -->
-        <section class="">
-          <!--Grid row-->
-          <div class="row">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h3 class="text-uppercase mb-4 font-weight-bold">
-                <span>
-                  <img src="images/logo.svg" alt="">
-                  Job Junction
-                </span>
-              </h3>
-              <p>
-                We collect reviews from our users so you can get an honest opinion of what an experience with our website.
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
-              <p>
-                <a class="text-gray" href="./product.html">Mango Pulp</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Guava Pulp</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Jaggery</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Pickle</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Tomato ketchup</a>
-              </p>
-              <p>
-                <a class="text-gray" href="./product.html">Cow's Ghee</a>
-              </p>
-            </div>
-            <!-- Grid column -->
-
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">
-                Useful links
-              </h6>
-              <p>
-                <a href="./index.html" class="text-gray">Home</a>
-              </p>
-              <p>
-                <a href="./about.html" class="text-gray">About Us</a>
-              </p>
-              <p>
-                <a href="./product.html" class="text-gray">Products</a>
-              </p>
-              <p>
-                <a href="./certificate.html" class="text-gray">Certificates</a>
-              </p>
-              <p>
-                <a href="./contact.html" class="text-gray">Contact Us</a>
-              </p>
-
-            </div>
-
-            <!-- Grid column -->
-            <hr class="w-100 clearfix d-md-none" />
-
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-              <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-              <a href="https://maps.app.goo.gl/GMQzc1Vhc2vxBCpTA" target=_blank class="text-gray"
-                style="text-decoration: none;">
-                <p><i class="fas fa-home mr-3"></i> Una - Talala Road, Madhupur Jambur, Gujarat-362140, India </p>
-              </a>
-
-              <a href="mailto:visionmangopulpsales1@gmail.com" class="text-gray" style="text-decoration: none;">
-                <p><i class="fas fa-envelope mr-3"></i> visionmangopulpsales1@gmail.com</p>
-              </a>
-
-              <a href="tel:7862819337" class="text-gray" style=" text-decoration: none;">
-                <p><i class="fas fa-phone mr-3"></i> +91 7862819337</p>
-              </a>
-            </div>
-            <!-- Grid column -->
-          </div>
-          <!--Grid row-->
-        </section>
-        <!-- Section: Links -->
 
         <hr class="my-3">
-
-        <!-- Section: Copyright -->
         <section class="p-3 pt-0">
           <div class="row d-flex align-items-center">
             <!-- Grid column -->
             <div class="col-md-7 col-lg-8 text-center text-md-end">
               <!-- Copyright -->
-              <div class="p-3 flex" style="justify-content: center; font-size : 15px;">
-                <b>Designed & Managed By : Jay Sanghani & Shubham Patel</b>
-                <a href="https://jay-sanghani.github.io/jaynshubham/" target="_blank">
-                  <button type="button b2" class="btn btn-outline-light"
-                    style="margin-left : 20px; border-radius: 15px;">Contact us</button>
+              <div class="p-3 flex" style="font-size : 15px;">
+                <b>Designed & Managed By : Jay Sanghani</b>
+                <a href="mailto:work.jay.sanghani@gmail.com" target="_blank">
+                  <button type="button b2" class="btn btn-outline-primary"
+                    style="margin-left : 20px; border-radius: 15px;">Contact me</button>
                 </a>
               </div>
               <!-- Copyright -->
             </div>
-            <!-- Grid column -->
-
-            <!-- Grid column -->
-
         </section>
-        <!-- Section: Copyright -->
-      </div>
-      <!-- Grid container -->
-    </footer>
+
 
 </body>
 
