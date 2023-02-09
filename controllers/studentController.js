@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const Student = require("./../model/Student.js");
+const Student = require("./../model/student.js");
 // const studentImage = require("./../model/studentImage");
 const jwt = require('jsonwebtoken');
 
@@ -126,11 +126,15 @@ const authVerify = async function (req, res, next) {
 
 const updateStudent = async function (req, res) {
   // console.log(req.user)
-  if (!req?.user?._id) {
+  // if (!req?.user?._id) {
+  //   return res.status(400).json({ 'message': 'Try Again' });
+  // }
+
+  if (!req?.body?.email) {
     return res.status(400).json({ 'message': 'Try Again' });
   }
 
-  const student = await Student.findOne({ id: req.body._id }).exec();
+  const student = await Student.findOne({ email: req.body.email}).exec();
   
   if (!student) {
     return res.status(204).json({ "message": `No student matches ID ${req.body.email}.` });

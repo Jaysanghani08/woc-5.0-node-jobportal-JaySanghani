@@ -81,7 +81,7 @@ router.get("/studentPhoto(.html)?", authVerify, (req, res) => {
 //   });
 // });
 
-router.post("/updateStudent", authVerify ,updateStudent);
+router.post("/updateStudent" ,updateStudent);
 
 router.get("/findCompanies(.ejs)?", authVerify, async function (req, res) {
   const { email, cpi, age, fname, description, package, position, website } = req.user;
