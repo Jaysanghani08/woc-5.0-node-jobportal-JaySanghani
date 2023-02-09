@@ -1,4 +1,4 @@
-const Company = require("../model/company");
+const Company = require("./../model/company");
 
 const companyCard = (cName, package, position, description, website) => {
   return card =

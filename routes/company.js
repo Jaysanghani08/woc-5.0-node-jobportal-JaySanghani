@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
-const { authVerify, updateCompany, logoutCompany , deleteCompany} = require('../controllers/companyController');
+const { authVerify, updateCompany, logoutCompany , deleteCompany} = require('./../controllers/companyController');
 // const {educationlvl} = require('../model/education')
 
 
@@ -34,7 +34,7 @@ router.get("/editCompany(.html)?", authVerify, (req, res) => {
   }
 })
 
-router.post("/updateCompany", updateCompany);
+router.post("/updateCompany",authVerify, updateCompany);
 
 router.get('/logOutCompany', authVerify, logoutCompany);
 router.get('/deleteCompany', authVerify, deleteCompany);

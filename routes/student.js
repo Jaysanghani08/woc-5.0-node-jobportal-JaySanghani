@@ -3,10 +3,10 @@ const path = require('path');
 const fs = require('fs');
 const router = express.Router();
 // const Student = require("../model/student");
-const { authVerify, updateStudent, logoutStudent, deleteStudent } = require('../controllers/studentController');
-const { educationlvl } = require('../model/education')
-const ImageModel = require('../model/studentImage')
-const Company = require("../model/company");
+const { authVerify, updateStudent, logoutStudent, deleteStudent } = require('./../controllers/studentController');
+const { educationlvl } = require('./../model/education')
+const ImageModel = require('./../model/studentImage')
+const Company = require("./../model/company");
 var multer = require('multer');
 
 const storage = multer.diskStorage({

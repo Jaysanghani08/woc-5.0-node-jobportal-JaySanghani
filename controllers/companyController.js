@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const Company = require("../model/company");
+const Company = require("./../model/company");
 const jwt = require('jsonwebtoken');
 
 const handleNewCompany = async function (req, res) {

@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
-const Student = require("../model/Student");
-const studentImage = require("../model/studentImage");
+const Student = require("./../model/Student");
+// const studentImage = require("./../model/studentImage");
 const jwt = require('jsonwebtoken');
 
 const handleNewStudent = async function (req, res) {

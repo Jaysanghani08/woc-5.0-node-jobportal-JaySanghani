@@ -1,8 +1,8 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
-const studentController = require('../controllers/studentController');
-const companyController = require('../controllers/companyController');
+const studentController = require('./../controllers/studentController');
+const companyController = require('./../controllers/companyController');
 
 // index path
 router.get("^/$|index(.html)?", (req, res) => {
