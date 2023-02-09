@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const router = express.Router();
-const { authVerify, updateCompany, logoutCompany , deleteCompany} = require('./../controllers/companyController');
+const { authVerify, updateCompany, logoutCompany , deleteCompany} = require('./../controllers/companyController.js');
 // const {educationlvl} = require('../model/education')
 
 

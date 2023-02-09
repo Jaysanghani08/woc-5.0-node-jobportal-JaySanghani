@@ -9,7 +9,7 @@ const mongoose = require('mongoose');
 const connectDB = require('./config/dbConn');
 const PORT = process.env.PORT || 3500;
 
-const studentController = require('./controllers/studentController');
+// const studentController = require('./controllers/studentController.js');
 
 // connect to DataBase
 connectDB();
